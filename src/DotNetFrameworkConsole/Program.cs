@@ -18,6 +18,16 @@ namespace ConsoleApp1
             logger.Warn("注意／警告（障害の一歩手前）");
             logger.Error("システムが停止するまではいかない障害が発生");
             logger.Fatal("システムが停止する致命的な障害が発生");
+
+            while (true)
+            {
+                foreach (var item in Enumerable.Range(0, 100))
+                {
+                    logger.Info(item);
+                }
+                Console.WriteLine("Press any key to exit");
+                Console.ReadLine();
+            }
         }
     }
 }
